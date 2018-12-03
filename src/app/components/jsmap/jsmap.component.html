@@ -1,0 +1,32 @@
+<div class="container">
+	<!-- <ngui-map zoom="12" center="Port Moresby, PG">
+		<marker position="-9.462600865808417,147.19655491411686"></marker>
+		<marker position="-9.457221098005244,147.18824978917837"></marker>
+	</ngui-map> -->
+	<div *ngIf="scheduledJourneys$ | async; let requestedTrips; else loading">
+    <nav class="nav nav-pills nav-stacked">
+      <a routerLink="requested-trips" routerLinkActive="active" class="nav-link">Requested Trips</a>
+      <a class="nav-link" routerLink="pending-trips" routerLinkActive="active">Pending Trips</a>
+    </nav>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Pickup Time</th>
+          <th>Client</th>
+          <th>Driver</th>
+          <th>Car</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let journey of requestedTrips'>
+          <td scope="row">{{journey.day + "/" + journey.month + "/" + journey.year + " - " + journey.hour + ":" + journey.min + " HRS" }}</td>
+          <td>{{journey.clientName}}</td>
+          <td>{{journey.assignDriver}}</td>
+          <td>{{journey.payType}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="requestedTrips.lenght === 0">No results to display</div>
+  </div>
+  <ng-template #loading>Loading &hellip;</ng-template>
+</div>

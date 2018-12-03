@@ -1,0 +1,36 @@
+footer {
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 2em .5em;
+}
+footer a {
+	color: goldenrod;
+}
+.panel ul {
+	list-style: none;
+}
+.panel {
+	border: 2px solid darkgrey;
+	padding: 0 2em 1em 2em;
+}
+.one-third.column {
+	padding-bottom: 2em;
+}
+#header {
+    width: 100%;
+    background: black;
+    padding: 1em 0;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+#header>p {
+	margin: 0;
+}
+#header>img {
+	width: 210px;
+}
+.hidden {
+	display: none;
+}

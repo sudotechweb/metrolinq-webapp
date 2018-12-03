@@ -33,6 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+./metrolinkq1.code-workspace
 
 # System Files
 .DS_Store
